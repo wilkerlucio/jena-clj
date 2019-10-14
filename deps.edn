@@ -1,0 +1,30 @@
+{:paths
+ ["src/main"]
+
+ :deps
+ {com.wsscode/pathom         {:mvn/version "2.2.26"}
+  com.taoensso/timbre        {:mvn/version "4.10.0"}
+
+  ; jena deps
+  org.apache.jena/jena-arq   {:mvn/version "3.12.0"}
+  org.apache.jena/jena-core  {:mvn/version "3.12.0"}
+  org.apache.jena/jena-iri   {:mvn/version "3.12.0"}
+  org.apache.jena/jena-tdb   {:mvn/version "3.12.0"}
+  io.bdrc/jena-stable-turtle {:mvn/version "0.6.0"}
+
+  potemkin                   {:mvn/version "0.4.5"}
+  gnl/ghostwheel             {:mvn/version "0.3.9"}}
+
+ :aliases
+ {:provided
+  {:extra-deps {org.clojure/clojure {:mvn/version "1.10.1"}}}
+
+  :dev
+  {:extra-paths ["src/dev" "src/cards"]
+   :extra-deps  {gnl/ghostwheel {:mvn/version "0.3.9"}}}
+
+  :test
+  {:extra-paths ["src/test"]}
+
+  :prod
+  {:extra-deps {gnl/ghostwheel.stubs {:mvn/version "0.3.9"}}}}}

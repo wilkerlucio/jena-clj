@@ -1,0 +1,7 @@
+{:check       true
+ :ignore-fx   true
+ :instrument  true
+ :outstrument true
+ :extrument   true
+ :expound     {:show-valid-values? true
+               :print-specs?       true}}
